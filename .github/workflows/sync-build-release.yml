@@ -95,6 +95,8 @@ jobs:
           path: /tmp/version-info/
 
   release:
+    permissions:
+      contents: write  # 授予创建 Release 的权限[reference:4][reference:5]
     needs: sync-and-build
     runs-on: ubuntu-latest
     steps:
